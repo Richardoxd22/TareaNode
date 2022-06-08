@@ -1,0 +1,17 @@
+{
+  "name": "tareanode",
+  "version": "1.0.0",
+  "description": "Tarea carpetas año y mes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node directorios.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "init",
+    "nodejs"
+  ],
+  "author": "Richard Santillán",
+  "license": "ISC"
+}
