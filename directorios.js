@@ -1,9 +1,10 @@
 const fs = require('fs');
 const mes = ['Enero', 'Febrero', 'Marzo', 'Abril' ,'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 const anio= ['2017', '2018', '2019', '2020', '2021','2022'];
+const dias =['lunes', 'martes','miercoles','jueves','viernes','sabado', 'domingo'];
 
-if(fs.existsSync(anio+ '\\')){    
-    console.log('La carpeta ya existe');
+if(fs.existsSync('2017')){    
+    console.log('Las carpetas ya existen');
 }
 
 else{
@@ -15,17 +16,15 @@ else{
         for(var m=0; m <mes.length;m++){
             fs.mkdir(anio[i]+'\\'+mes[m],function(err){
                 console.log('se crearon los meses');
-            })
-            numdias= getDias(anio[i],mes[m]);
+            });
+            var numdias= new Date([i],[m],0).getDate();
+            console.log(numdias);
             for(var nd=1 ; nd<=numdias;nd++)
             {
-                fs.writeFileSync(anio[i]+'\\'+mes[m]+'\\'+nd.toString()+'.txt',function(err){
+                fs.writeFileSync(anio[i] + '\\' +mes[m]+'\\'+ nd+'.txt','',function(err){
                 });
             }
         }
     }
 }
 
-function getDias(anioac,mesac){
-    return new Date (anioac,mesac,0).getDate();
-}
