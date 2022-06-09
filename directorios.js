@@ -2,7 +2,7 @@ const fs = require('fs');
 const mes = ['Enero', 'Febrero', 'Marzo', 'Abril' ,'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 const anio= ['2017', '2018', '2019', '2020', '2021','2022'];
 
-if(fs.existsSync('\\',anio)){    
+if(fs.existsSync(anio+ '\\')){    
     console.log('La carpeta ya existe');
 }
 
